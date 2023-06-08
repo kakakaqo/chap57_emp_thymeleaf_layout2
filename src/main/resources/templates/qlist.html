@@ -1,0 +1,38 @@
+<html layout:decorate="~{layout}">
+<div layout:fragment="content" class="container my-3">
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Hire Date</th>
+                <th>Job ID</th>
+                <th>Salary</th>
+                <th>Commission Pct</th>
+                <th>Manager ID</th>
+                <th>Department ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="employee : ${list}">
+                <td>
+                    <a th:href="@{/emp/read(id=${employee.employeeId})}">
+                        <span th:text="${employee.employeeId}"></span>
+                    </a>
+                </td>
+                <td><span th:text="${employee.firstName} + ' ' + ${employee.lastName}"></span></td>
+                <td><span th:text="${employee.email}"></span></td>
+                <td><span th:text="${employee.phoneNumber}"></span></td>
+                <td><span th:text="${employee.hireDate}"></span></td>
+                <td><span th:text="${employee.jobId}"></span></td>
+                <td><span th:text="${employee.salary}"></span></td>
+                <td><span th:text="${employee.commissionPct}"></span></td>
+                <td><span th:text="${employee.managerId}"></span></td>
+                <td><span th:text="${employee.departmentId}"></span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</html>

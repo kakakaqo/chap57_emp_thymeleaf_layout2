@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}">
+    
+    <!-- sbb CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+    
+	<!-- Bootstrap core JavaScript -->
+	<script th:inline="javascript" type="text/javascript" th:src="@{/vendor/jquery/jquery.min.js}"></script>
+	<script th:inline="javascript" type="text/javascript" th:src="@{/vendor/bootstrap/js/bootstrap.min.js}"></script>    
+    
+    <title>Hello, sbb!</title>
+</head>
+<body>
+
+	<!-- 기본 템플릿 안에 삽입될 내용 Start -->
+	<th:block layout:fragment="content">
+	</th:block>
+	<!-- 기본 템플릿 안에 삽입될 내용 End -->
+
+</body>
+</html>
